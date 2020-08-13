@@ -10,10 +10,19 @@
     Dica: para verificar se um vetor contém um valor, utilize o método indexOf
 */ 
 
-function tem Habilidade(skills) {
-
+function temHabilidade(array, element) {
+    // Use indexOf() to search for the element
+    const result = array.indexOf(element);
+    // If result of the indexOf is different from -1, the element is present
+    if (result != -1) {
+        console.log('true');
+    }
+    // If the result is -1, the element is not present
+    else {
+        console.log('false');
+    }
 }
-
+// Declaration of the array
 var skills = ["Javascript", "ReactJS", "React Native"];
-
-temHabilidade(skills);
+// Function calling with the parameters 
+temHabilidade(skills, "Javascript");
