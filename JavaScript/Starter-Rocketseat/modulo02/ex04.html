@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Exercício 03 | Módulo 02</title>
+  </head>
+  <body>
+    <input type="text" name="nome">
+    <button onClick="adicionar()">Adicionar</button>
+    <ul id="lista" class="lista"></ul>
+
+    <script>
+      var nomes = ["Diego", "Gabriel", "Lucas"];
+      /* Iterates over all array itens and stores the index in the variable "index" */
+      for (let index in nomes) {
+        createItem(nomes[index])
+      }
+
+      function adicionar() {
+        var inputName = document.querySelector("input")
+        createItem(inputName.value)
+      }
+
+      function createItem(content) {
+        /* Creates an element li with a text content */
+        var createdItem = document.createElement("li")
+        createdItem.textContent = content
+
+        /* Defines where the created item will be inserted */
+        var containerElement = document.querySelector("#lista")
+        containerElement.appendChild(createdItem)
+      }
+      
+    </script>
+  </body>
+</html>
+
+<!-- 
+4º exercício
+Seguindo o resultado do exercício anterior adicione um input em tela e um botão como a seguir:
+<input type="text" name="nome">
+<button onClick="adicionar()">Adicionar</button>
+Ao clicar no botão, a função adicionar() deve ser disparada adicionando um novo item a lista de
+nomes baseado no nome preenchido no input e renderizando o novo item em tela juntos aos
+demais itens anteriores. Além disso, o conteúdo do input deve ser apagado após o clique.
+-->
