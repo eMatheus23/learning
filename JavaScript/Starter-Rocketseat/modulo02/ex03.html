@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Exercício 03 | Módulo 02</title>
+  </head>
+  <body>
+    <ul id="lista" class="lista">
+
+    </ul>
+
+    <script>
+      var nomes = ["Diego", "Gabriel", "Lucas"];
+
+      /* Iterates over all array itens and stores the index in the variable "index" */
+      for (let index in nomes) {
+        /* Creates an element li with a text content */
+        var createdItem = document.createElement("li")
+        createdItem.textContent = nomes[index]
+
+        /* Defines where the created item will be inserted */
+        var containerElement = document.querySelector("#lista")
+        containerElement.appendChild(createdItem)
+      }
+    </script>
+  </body>
+</html>
+
+<!-- 
+2º exercício
+Utilizando o resultado do primeiro desafio, toda vez que o usuário passar o mouse por cima de
+algum quadrado troque sua cor para uma cor aleatória gerada pela função abaixo:
+function getRandomColor() {
+ var letters = "0123456789ABCDEF";
+ var color = "#";
+ for (var i = 0; i < 6; i++) {
+ color += letters[Math.floor(Math.random() * 16)];
+ }
+ return color;
+}
+var newColor = getRandomColor(); // #E943F0
+-->
