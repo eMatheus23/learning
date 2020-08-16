@@ -19,6 +19,7 @@
       function adicionar() {
         var inputName = document.querySelector("input")
         createItem(inputName.value)
+        inputName.value = ""
       }
 
       function createItem(content) {
@@ -30,7 +31,7 @@
         var containerElement = document.querySelector("#lista")
         containerElement.appendChild(createdItem)
       }
-      
+
     </script>
   </body>
 </html>
