@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Exercício 02 | Módulo 02</title>
+  </head>
+  <body>
+    <div id="app">
+      <button class="botao">Click Here to Create a Box</button>
+    </div>
+
+    <script>
+      // Stores the adress of the button in a variable
+      var btnElement = document.querySelector("button.botao");
+      
+      // Executes a function onclick
+      btnElement.onclick = () => {
+        // Creates an element "div" with atributes
+        var createdElement = document.createElement("div");
+        createdElement.setAttribute("class", "box");
+        // On mouse over, executes the changeColor() function with "this"
+        // "This" is like an adress of the current element
+        createdElement.setAttribute("onmouseover", "changeColor(this)");
+        createdElement.style.width = "100px";
+        createdElement.style.height = "100px";
+        createdElement.style.backgroundColor = "#f00";
+
+        // Defines the location where the new element will be created
+        var containerElement = document.querySelector("#app");
+        containerElement.appendChild(createdElement);
+
+      };
+
+      // Change the color of that box with a function
+      function changeColor(element) {
+        element.style.backgroundColor = getRandomColor();
+      }
+      
+      // Generates a random color number
+      function getRandomColor() {
+          var letters = "0123456789ABCDEF";
+          var color = "#";
+          for (var i = 0; i < 6; i++) {
+          color += letters[Math.floor(Math.random() * 16)];
+          }
+          return color;
+        }
+
+
+    </script>
+  </body>
+</html>
+
+<!-- 
+2º exercício
+Utilizando o resultado do primeiro desafio, toda vez que o usuário passar o mouse por cima de
+algum quadrado troque sua cor para uma cor aleatória gerada pela função abaixo:
+function getRandomColor() {
+ var letters = "0123456789ABCDEF";
+ var color = "#";
+ for (var i = 0; i < 6; i++) {
+ color += letters[Math.floor(Math.random() * 16)];
+ }
+ return color;
+}
+var newColor = getRandomColor(); // #E943F0
+-->
