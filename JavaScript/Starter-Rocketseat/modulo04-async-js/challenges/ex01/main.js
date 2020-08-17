@@ -1,7 +1,7 @@
 function checaIdade (idade) {
     // Forma de criar uma promisse
     return new Promise(function (resolve, reject) { 
-        /*  setTimeout é uma função que executa determinada ação após o tempo definido
+        /*  setTimeout é um método que executa determinada ação após o tempo definido
             setTimeout(function(){ action }, time(ms));
         */
         setTimeout(() => {
