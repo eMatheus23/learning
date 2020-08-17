@@ -25,8 +25,6 @@ checaIdade(20)
         console.warn("Menor que 18");
     })
 
-
-
 /*
 1º exercício
 Crie uma função que recebe a idade de um usuário e retorna uma Promise que depois de 2
