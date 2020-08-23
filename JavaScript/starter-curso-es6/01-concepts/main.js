@@ -1,9 +1,3 @@
-class Matematica {
-    // Quando eu declaro static, ele não enxerga o resto da classe
-    // Ele é independente do restante da classe
-    static soma(a, b) {
-        return a + b;
-    }
-}
+const arr = [1, 3, 4, 5, 6];
 
-console.log(Matematica.soma(1, 2));
+
