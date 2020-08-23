@@ -1,0 +1,14 @@
+Explicando o script dentro do package.json:
+
+"scripts": {
+    "dev": "babel ./main.js -o ./bundle.js"
+  }
+
+O papel desse script é passar o main.js pelo babel, 
+e o babel vai tornar o código compatível com qualquer 
+navegador, mesmo de antes do ES6.
+O resultado é armazenado no bunble.js 
+
+Posso usar também a propriedade -w para ativar o modo monitoramento:
+"dev": "babel ./main.js -o ./bundle.js -w"
+Assim, sempre que eu salvar o main.js, ele vai alterar o bundle.js

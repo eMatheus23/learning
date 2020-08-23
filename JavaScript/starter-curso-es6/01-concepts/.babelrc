@@ -1,0 +1,4 @@
+{ 
+    // Preset que detecta qual ambiente estaremos trabalhando. 
+    "presets": ["@babel/preset-env"] 
+}
