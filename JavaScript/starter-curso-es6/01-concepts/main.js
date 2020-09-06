@@ -1,26 +1,12 @@
+// REST
+
 const usuario = {
-    nome: 'Diego',
-    idade: 23,
-    endereco: {
-        cidade: 'Rio do Sul',
-        estado: 'SC',
-    },
-}
+	nome: "Diego",
+	idade: 23,
+	empresa: "Rocketseat",
+};
 
-function mostraNome({ nome, idade }) {
-    console.log(nome, idade);
-}
-
-mostraNome(usuario);
-
-
-
-
-
-/* Desestruturação de objetos
-const { nome, idade, endereco: { cidade } } = usuario;
+const { nome, ...resto } = usuario;
 
 console.log(nome);
-console.log(idade);
-console.log(cidade);
-*/
+console.log(resto);
