@@ -1,7 +1,25 @@
 "use strict";
 
-var arr = [1, 3, 4, 5, 6];
-var newArr = arr.map(function (item) {
-  return item * 2;
-});
-console.log(newArr);
+var usuario = {
+  nome: 'Diego',
+  idade: 23,
+  endereco: {
+    cidade: 'Rio do Sul',
+    estado: 'SC'
+  }
+};
+
+function mostraNome(_ref) {
+  var nome = _ref.nome,
+      idade = _ref.idade;
+  console.log(nome, idade);
+}
+
+mostraNome(usuario);
+/* Desestruturação de objetos
+const { nome, idade, endereco: { cidade } } = usuario;
+
+console.log(nome);
+console.log(idade);
+console.log(cidade);
+*/

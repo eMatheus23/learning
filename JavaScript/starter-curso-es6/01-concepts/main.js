@@ -1,5 +1,26 @@
-const arr = [1, 3, 4, 5, 6];
+const usuario = {
+    nome: 'Diego',
+    idade: 23,
+    endereco: {
+        cidade: 'Rio do Sul',
+        estado: 'SC',
+    },
+}
 
-const newArr = arr.map(item => item * 2);
+function mostraNome({ nome, idade }) {
+    console.log(nome, idade);
+}
 
-console.log(newArr);
+mostraNome(usuario);
+
+
+
+
+
+/* Desestruturação de objetos
+const { nome, idade, endereco: { cidade } } = usuario;
+
+console.log(nome);
+console.log(idade);
+console.log(cidade);
+*/
