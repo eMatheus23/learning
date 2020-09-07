@@ -11,9 +11,12 @@ console.log(somaRest(1, 3, 4));
 o spread tem a funcao de propagar, de repassar as informação de um objeto ou 
 array para outra estrutura de dados */
 
-const arr1 = [1, 2, 3];
-const arr2 = [4, 5, 6];
+const usuario1 = {
+    nome: 'Diego',
+    idade: 23,
+    empresa: 'Rocketseat',
+};
 
-const arr3 = [ ...arr1, ...arr2 ]
+const usuario2 = { ...usuario1, nome: 'Gabriel' };
 
-console.log(arr3);
+console.log(usuario2);
