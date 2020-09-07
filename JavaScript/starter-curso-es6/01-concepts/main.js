@@ -1,22 +1,10 @@
-// REST
+// Template literals => Uma forma de incluir variáveis dentro de strings
+// a partir do ES6
 
-function somaRest(...params) {
-    return params.reduce((total, next) => total + next);
-}
+const nome = "Diego";
+const idade = 23;
 
-console.log(somaRest(1, 3, 4));
+// console.log('Meu nome é ' + nome + ' e tenho ' + idade + ' anos.');
 
-// SPREAD
-/* Enquanto o rest pega o resto de alguma desestruturação ou parâmetros,
-o spread tem a funcao de propagar, de repassar as informação de um objeto ou 
-array para outra estrutura de dados */
-
-const usuario1 = {
-    nome: 'Diego',
-    idade: 23,
-    empresa: 'Rocketseat',
-};
-
-const usuario2 = { ...usuario1, nome: 'Gabriel' };
-
-console.log(usuario2);
+console.log(`Meu nome é ${nome} e tenho ${idade} anos.`)
+// Preciso usar crase e não aspas.
