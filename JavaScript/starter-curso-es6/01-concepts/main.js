@@ -1,22 +1,48 @@
-const nome = "Diego";
-const idade = 23;
+/*
+Exercícios: Módulo 01
+1º exercício
+Para testar seus conhecimentos com classes, crie uma classe com nome "Admin", essa classe deve
+extender uma segunda classe chamada "Usuario".
+A classe usuário deve receber dois parâmetros no método construtor, e-mail e senha, e anotá-los
+em propriedades da classe. A classe "Admin" por sua vez não recebe parâmetros mas deve
+repassar os parâmetros de e-mail e senha à classe pai e marcar uma propriedade "admin" como
+true na classe.
+Agora com suas classes formatadas, adicione um método na classe Usuario chamado isAdmin que
+retorna se o usuário é administrador ou não baseado na propriedade admin ser true ou não.
 
-// Caso queira passar variáveis para dentro de um objeto ou array
-// era necessário usar a seguinte sintaxe:
-const usuario = {
-    nome: nome,
-    idade: idade,
-    empresa: 'Rocketseat',
-};
+const User1 = new Usuario('email@teste.com', 'senha123');
+const Adm1 = new Admin('email@teste.com', 'senha123');
+console.log(User1.isAdmin()) // false
+console.log(Adm1.isAdmin()) // true
+*/
 
-console.log(usuario);
+console.log('Exercício 01')
+class Usuario {
+	constructor(email, senha) {
+		this.email = email;
+		this.senha = senha;
+		this.admin = false;
+	}
+	isAdmin() {
+		if (this.admin === true) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+}
 
-// Porém, com o ES6, posso usar uma sintaxe mais curta:
+class Admin extends Usuario {
+	constructor() {
+		super();
 
-const usuarioShort = {
-    nome, // Não preciso repetir
-    idade,
-    empresa: 'Rocketseat',
-};
+		this.admin = true;
+	}
+}
 
-console.log(usuarioShort);
+const User1 = new Usuario("email@teste.com", "senha123");
+const Adm1 = new Admin("email@teste.com", "senha123");
+console.log(User1.isAdmin()); // false
+console.log(Adm1.isAdmin()); // true
+
+
