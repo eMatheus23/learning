@@ -1,8 +1,20 @@
 "use strict";
 
-// Template literals => Uma forma de incluir variáveis dentro de strings
-// a partir do ES6
 var nome = "Diego";
-var idade = 23; // console.log('Meu nome é ' + nome + ' e tenho ' + idade + ' anos.');
+var idade = 23; // Caso queira passar variáveis para dentro de um objeto ou array
+// era necessário usar a seguinte sintaxe:
 
-console.log("Meu nome \xE9 ".concat(nome, " e tenho ").concat(idade, " anos.")); // Preciso usar crase e não aspas.
+var usuario = {
+  nome: nome,
+  idade: idade,
+  empresa: 'Rocketseat'
+};
+console.log(usuario); // Porém, com o ES6, posso usar uma sintaxe mais curta:
+
+var usuarioShort = {
+  nome: nome,
+  // Não preciso repetir
+  idade: idade,
+  empresa: 'Rocketseat'
+};
+console.log(usuarioShort);

@@ -1,10 +1,22 @@
-// Template literals => Uma forma de incluir variáveis dentro de strings
-// a partir do ES6
-
 const nome = "Diego";
 const idade = 23;
 
-// console.log('Meu nome é ' + nome + ' e tenho ' + idade + ' anos.');
+// Caso queira passar variáveis para dentro de um objeto ou array
+// era necessário usar a seguinte sintaxe:
+const usuario = {
+    nome: nome,
+    idade: idade,
+    empresa: 'Rocketseat',
+};
 
-console.log(`Meu nome é ${nome} e tenho ${idade} anos.`)
-// Preciso usar crase e não aspas.
+console.log(usuario);
+
+// Porém, com o ES6, posso usar uma sintaxe mais curta:
+
+const usuarioShort = {
+    nome, // Não preciso repetir
+    idade,
+    empresa: 'Rocketseat',
+};
+
+console.log(usuarioShort);
