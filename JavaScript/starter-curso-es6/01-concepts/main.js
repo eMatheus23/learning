@@ -1,9 +1,16 @@
 // REST
 
-const arr = [1, 2, 3, 4];
+// Uma função que soma parâmetros 
+function soma(a, b, c) {
+    return a + b + c;
+}
 
-const [ a, b, ...c ] = arr;
+console.log(soma(1, 3, 4));
+// Para cada parâmetro a mais, vou precisar modificar a função 
+// Mas se eu quiser usar n parametros, posso usar rest.
 
-console.log(a);
-console.log(b);
-console.log(c);
+function somaRest(...params) {
+    return params.reduce((total, next) => total + next);
+}
+
+console.log(somaRest(1, 3, 4));
