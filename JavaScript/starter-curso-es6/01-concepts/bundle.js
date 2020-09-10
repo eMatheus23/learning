@@ -1,72 +1,44 @@
 "use strict";
 
-// 3.1
-var arr = [1, 2, 3, 4, 5];
-arr.map(function (item) {
-  return item + 10;
-}); // 3.2
-// Dica: Utilize uma constante pra function
-
-var usuario = {
-  nome: 'Diego',
-  idade: 23
+var empresa = {
+  nome: "Rocketseat",
+  endereco: {
+    cidade: "Rio do Sul",
+    estado: "SC"
+  }
 };
+var nome = empresa.nome,
+    _empresa$endereco = empresa.endereco,
+    cidade = _empresa$endereco.cidade,
+    estado = _empresa$endereco.estado;
+console.log(nome); // Rocketseat
 
-var mostraIdade = function mostraIdade(usuario) {
-  return usuario.idade;
+console.log(cidade); // Rio do Sul
+
+console.log(estado); // SC
+
+/* 4º exercício
+4.1 Desestruturação simples
+A partir do seguinte objeto:
+const empresa = {
+ nome: 'Rocketseat',
+ endereco: {
+ cidade: 'Rio do Sul',
+ estado: 'SC',
+ }
 };
-
-mostraIdade(usuario); // 3.3
-// Dica: Utilize uma constante pra function
-
-var nome = "Carlos";
-var idade = 23;
-
-var mostraUsuario = function mostraUsuario() {
-  var nome = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'Diego';
-  var idade = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 18;
-  return {
-    nome: nome,
-    idade: idade
-  };
-};
-
-console.log(mostraUsuario(nome, idade));
-console.log(mostraUsuario(nome));
-console.log(mostraUsuario()); // 3.4
-
-var promise = function promise() {
-  return new Promise(function (resolve, reject) {
-    return resolve();
-  });
-};
-/* 3º exercício
-Converta as funções nos seguintes trechos de código em Arrow Functions:
-// 3.1
-const arr = [1, 2, 3, 4, 5];
-arr.map(function(item) {
- return item + 10;
-});
-// 3.2
-// Dica: Utilize uma constante pra function
-const usuario = { nome: 'Diego', idade: 23 };
-function mostraIdade(usuario) {
- return usuario.idade;
+Utilize a desestruturação para transformar as propriedades nome, cidade e estado em variáveis, no
+fim deve ser possível fazer o seguinte:
+console.log(nome); // Rocketseat
+console.log(cidade); // Rio do Sul
+console.log(estado); // SC
+4.2 Desestruturação em parâmetros
+Na seguinte função:
+function mostraInfo(usuario) {
+ return `${usuario.nome} tem ${usuario.idade} anos.`;
 }
-mostraIdade(usuario);
-// 3.3
-// Dica: Utilize uma constante pra function
-const nome = "Diego";
-const idade = 23;
-function mostraUsuario(nome = 'Diego', idade = 18) {
- return { nome, idade };
-}
-mostraUsuario(nome, idade);
-mostraUsuario(nome);
-// 3.4
-const promise = function() {
- return new Promise(function(resolve, reject) {
- return resolve();
- })
-
+mostraInfo({ nome: 'Diego', idade: 23 })
+Utilize a desestruturação nos parâmetros da função para buscar o nome e idade do usuário
+separadamente e a função poder retornar apenas:
+return `${nome} tem ${idade} anos.`;
 */
