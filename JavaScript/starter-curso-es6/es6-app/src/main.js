@@ -1,5 +1,7 @@
-import umPorSegundo from './challenge01'
+// import umPorSegundo from './challenge01'
+import getUserFromGithub from './challenge02'
 
-console.log("Challenge 01:")
-umPorSegundo();
+// umPorSegundo();
 
+getUserFromGithub("diego3g");
+getUserFromGithub("diego3g124123");
